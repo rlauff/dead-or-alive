@@ -1,0 +1,2 @@
+python3 generator/generate.py     --katago ~/katago/katago --model ~/katago/kata-b18.bin.gz     --config analysis.cfg --size 13 --games 40000     --weak-visits 10 --selfplay-visits 100 --weak-side random     --pass-probe --probe-every 3     --analysis-visits 800 --enum-visits 500     --max-solutions 8 --min-quality 0 --hard-open-eyespace 1000 --invade-prob 0.08
+
