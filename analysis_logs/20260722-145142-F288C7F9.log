@@ -1,0 +1,50 @@
+2026-07-22 14:51:42+0200: Running with following config:
+logAllRequests = false
+logAllResponses = false
+logDir = analysis_logs
+logSearchInfo = false
+maxVisits = 5000
+nnCacheSizePowerOfTwo = 21
+nnMaxBatchSize = 32
+nnMutexPoolSizePowerOfTwo = 17
+numAnalysisThreads = 1
+numSearchThreads = 16
+reportAnalysisWinratesAs = BLACK
+
+2026-07-22 14:51:42+0200: Analysis Engine starting...
+2026-07-22 14:51:42+0200: KataGo v1.16.5
+2026-07-22 14:51:42+0200: nnRandSeed0 = 10266993659385986503
+2026-07-22 14:51:42+0200: After dedups: nnModelFile0 = /home/robert/katago/kata-b18.bin.gz useFP16 auto useNHWC auto
+2026-07-22 14:51:42+0200: Initializing neural net buffer to be size 19 * 19 allowing smaller boards
+2026-07-22 14:51:46+0200: Found OpenCL Platform 0: NVIDIA CUDA (NVIDIA Corporation) (OpenCL 3.0 CUDA 13.2.87)
+2026-07-22 14:51:46+0200: Found 1 device(s) on platform 0 with type CPU or GPU or Accelerator
+2026-07-22 14:51:46+0200: Found OpenCL Device 0: NVIDIA GeForce RTX 5060 Laptop GPU (NVIDIA Corporation) (score 11000300)
+2026-07-22 14:51:46+0200: Creating context for OpenCL Platform: NVIDIA CUDA (NVIDIA Corporation) (OpenCL 3.0 CUDA 13.2.87)
+2026-07-22 14:51:46+0200: Using OpenCL Device 0: NVIDIA GeForce RTX 5060 Laptop GPU (NVIDIA Corporation) OpenCL 3.0 CUDA (Extensions: cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics cl_khr_local_int32_base_atomics cl_khr_local_int32_extended_atomics cl_khr_fp64 cl_khr_3d_image_writes cl_khr_byte_addressable_store cl_khr_icd cl_khr_gl_sharing cl_nv_compiler_options cl_nv_device_attribute_query cl_nv_pragma_unroll cl_nv_copy_opts cl_nv_create_buffer cl_khr_int64_base_atomics cl_khr_int64_extended_atomics cl_khr_device_uuid cl_khr_pci_bus_info cl_khr_external_semaphore cl_khr_external_memory cl_khr_external_semaphore_opaque_fd cl_khr_external_memory_opaque_fd cl_khr_semaphore)
+2026-07-22 14:51:46+0200: Loaded tuning parameters from: /home/robert/.katago/opencltuning/tune11_gpuNVIDIAGeForceRTX5060LaptopGPU_x19_y19_c384_mv14.txt
+2026-07-22 14:51:46+0200: OpenCL backend thread 0: Model version 14
+2026-07-22 14:51:46+0200: OpenCL backend thread 0: Model name: kata1-b18c384nbt-s9996604416-d4316597426
+2026-07-22 14:51:47+0200: OpenCL backend thread 0: FP16Storage true FP16Compute false FP16TensorCores true FP16TensorCoresFor1x1 false
+2026-07-22 14:51:47+0200: Loaded config analysis.cfg
+2026-07-22 14:51:47+0200: Loaded model /home/robert/katago/kata-b18.bin.gz
+2026-07-22 14:51:47+0200: Analyzing up to 1 positions at a time in parallel
+2026-07-22 14:51:47+0200: Started, ready to begin handling requests
+2026-07-22 15:13:48+0200: Error: {"error":"Illegal move 0: H6","field":"moves","id":"q723"}
+2026-07-22 15:26:20+0200: Error: {"error":"Illegal move 0: H6","field":"moves","id":"q1389"}
+2026-07-22 15:26:43+0200: Error: {"error":"Illegal move 2: H6","field":"moves","id":"q1430"}
+2026-07-22 15:27:32+0200: Error: {"error":"Illegal move 4: H6","field":"moves","id":"q1467"}
+2026-07-22 15:28:13+0200: Error: {"error":"Illegal move 4: H6","field":"moves","id":"q1500"}
+2026-07-22 15:28:17+0200: Error: {"error":"Illegal move 4: J5","field":"moves","id":"q1503"}
+2026-07-22 15:29:01+0200: Error: {"error":"Illegal move 4: H6","field":"moves","id":"q1534"}
+2026-07-22 15:29:51+0200: Error: {"error":"Illegal move 2: H6","field":"moves","id":"q1567"}
+2026-07-22 15:29:55+0200: Error: {"error":"Illegal move 2: J5","field":"moves","id":"q1570"}
+2026-07-22 15:30:43+0200: Error: {"error":"Illegal move 4: H6","field":"moves","id":"q1605"}
+2026-07-22 15:30:44+0200: Error: {"error":"Illegal move 4: J5","field":"moves","id":"q1608"}
+2026-07-22 15:31:20+0200: Error: {"error":"Illegal move 4: H6","field":"moves","id":"q1639"}
+2026-07-22 15:31:24+0200: Error: {"error":"Illegal move 4: J5","field":"moves","id":"q1642"}
+2026-07-22 15:32:03+0200: Error: {"error":"Illegal move 4: H6","field":"moves","id":"q1673"}
+2026-07-22 15:32:56+0200: Error: {"error":"Illegal move 2: H6","field":"moves","id":"q1708"}
+2026-07-22 15:33:45+0200: Error: {"error":"Illegal move 4: H6","field":"moves","id":"q1745"}
+2026-07-22 15:34:29+0200: Error: {"error":"Illegal move 4: H6","field":"moves","id":"q1780"}
+2026-07-22 15:34:31+0200: Error: {"error":"Illegal move 4: J5","field":"moves","id":"q1783"}
+2026-07-22 15:35:12+0200: Error: {"error":"Illegal move 4: H6","field":"moves","id":"q1812"}

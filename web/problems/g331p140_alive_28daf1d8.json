@@ -1,0 +1,848 @@
+{
+ "id": "g331p140_alive_28daf1d8",
+ "boardSize": 13,
+ "rules": "chinese",
+ "komi": 7.5,
+ "initialStones": [
+  [
+   "W",
+   "B13"
+  ],
+  [
+   "W",
+   "D13"
+  ],
+  [
+   "B",
+   "E13"
+  ],
+  [
+   "B",
+   "F13"
+  ],
+  [
+   "W",
+   "L13"
+  ],
+  [
+   "W",
+   "A12"
+  ],
+  [
+   "W",
+   "C12"
+  ],
+  [
+   "W",
+   "D12"
+  ],
+  [
+   "B",
+   "E12"
+  ],
+  [
+   "B",
+   "G12"
+  ],
+  [
+   "B",
+   "H12"
+  ],
+  [
+   "B",
+   "J12"
+  ],
+  [
+   "B",
+   "K12"
+  ],
+  [
+   "B",
+   "L12"
+  ],
+  [
+   "W",
+   "M12"
+  ],
+  [
+   "W",
+   "N12"
+  ],
+  [
+   "W",
+   "C11"
+  ],
+  [
+   "B",
+   "D11"
+  ],
+  [
+   "W",
+   "E11"
+  ],
+  [
+   "B",
+   "F11"
+  ],
+  [
+   "B",
+   "K11"
+  ],
+  [
+   "W",
+   "L11"
+  ],
+  [
+   "W",
+   "A10"
+  ],
+  [
+   "W",
+   "C10"
+  ],
+  [
+   "B",
+   "D10"
+  ],
+  [
+   "W",
+   "E10"
+  ],
+  [
+   "B",
+   "F10"
+  ],
+  [
+   "B",
+   "G10"
+  ],
+  [
+   "B",
+   "H10"
+  ],
+  [
+   "B",
+   "J10"
+  ],
+  [
+   "W",
+   "K10"
+  ],
+  [
+   "W",
+   "M10"
+  ],
+  [
+   "W",
+   "N10"
+  ],
+  [
+   "W",
+   "B9"
+  ],
+  [
+   "W",
+   "C9"
+  ],
+  [
+   "B",
+   "D9"
+  ],
+  [
+   "W",
+   "E9"
+  ],
+  [
+   "W",
+   "F9"
+  ],
+  [
+   "W",
+   "G9"
+  ],
+  [
+   "B",
+   "H9"
+  ],
+  [
+   "W",
+   "J9"
+  ],
+  [
+   "W",
+   "L9"
+  ],
+  [
+   "W",
+   "A8"
+  ],
+  [
+   "B",
+   "B8"
+  ],
+  [
+   "W",
+   "C8"
+  ],
+  [
+   "B",
+   "D8"
+  ],
+  [
+   "B",
+   "E8"
+  ],
+  [
+   "B",
+   "F8"
+  ],
+  [
+   "W",
+   "G8"
+  ],
+  [
+   "W",
+   "H8"
+  ],
+  [
+   "W",
+   "J8"
+  ],
+  [
+   "W",
+   "L8"
+  ],
+  [
+   "B",
+   "M8"
+  ],
+  [
+   "W",
+   "N8"
+  ],
+  [
+   "B",
+   "B7"
+  ],
+  [
+   "W",
+   "C7"
+  ],
+  [
+   "B",
+   "D7"
+  ],
+  [
+   "B",
+   "F7"
+  ],
+  [
+   "W",
+   "G7"
+  ],
+  [
+   "B",
+   "H7"
+  ],
+  [
+   "B",
+   "L7"
+  ],
+  [
+   "W",
+   "M7"
+  ],
+  [
+   "B",
+   "N7"
+  ],
+  [
+   "B",
+   "B6"
+  ],
+  [
+   "B",
+   "C6"
+  ],
+  [
+   "W",
+   "D6"
+  ],
+  [
+   "W",
+   "E6"
+  ],
+  [
+   "B",
+   "F6"
+  ],
+  [
+   "B",
+   "G6"
+  ],
+  [
+   "W",
+   "H6"
+  ],
+  [
+   "B",
+   "J6"
+  ],
+  [
+   "B",
+   "K6"
+  ],
+  [
+   "B",
+   "L6"
+  ],
+  [
+   "W",
+   "M6"
+  ],
+  [
+   "B",
+   "C5"
+  ],
+  [
+   "B",
+   "D5"
+  ],
+  [
+   "B",
+   "E5"
+  ],
+  [
+   "B",
+   "G5"
+  ],
+  [
+   "W",
+   "H5"
+  ],
+  [
+   "B",
+   "J5"
+  ],
+  [
+   "W",
+   "K5"
+  ],
+  [
+   "W",
+   "L5"
+  ],
+  [
+   "W",
+   "M5"
+  ],
+  [
+   "B",
+   "N5"
+  ],
+  [
+   "W",
+   "A4"
+  ],
+  [
+   "B",
+   "B4"
+  ],
+  [
+   "W",
+   "C4"
+  ],
+  [
+   "W",
+   "D4"
+  ],
+  [
+   "B",
+   "F4"
+  ],
+  [
+   "B",
+   "G4"
+  ],
+  [
+   "W",
+   "H4"
+  ],
+  [
+   "W",
+   "J4"
+  ],
+  [
+   "B",
+   "K4"
+  ],
+  [
+   "W",
+   "L4"
+  ],
+  [
+   "W",
+   "M4"
+  ],
+  [
+   "W",
+   "B3"
+  ],
+  [
+   "W",
+   "E3"
+  ],
+  [
+   "B",
+   "F3"
+  ],
+  [
+   "B",
+   "G3"
+  ],
+  [
+   "W",
+   "J3"
+  ],
+  [
+   "B",
+   "K3"
+  ],
+  [
+   "B",
+   "L3"
+  ],
+  [
+   "W",
+   "M3"
+  ],
+  [
+   "W",
+   "C2"
+  ],
+  [
+   "W",
+   "D2"
+  ],
+  [
+   "B",
+   "F2"
+  ],
+  [
+   "W",
+   "G2"
+  ],
+  [
+   "W",
+   "H2"
+  ],
+  [
+   "W",
+   "J2"
+  ],
+  [
+   "B",
+   "K2"
+  ],
+  [
+   "B",
+   "L2"
+  ],
+  [
+   "B",
+   "M2"
+  ],
+  [
+   "B",
+   "N2"
+  ],
+  [
+   "W",
+   "J1"
+  ],
+  [
+   "W",
+   "K1"
+  ],
+  [
+   "B",
+   "L1"
+  ]
+ ],
+ "toMove": "W",
+ "status": "alive",
+ "targetColor": "B",
+ "targetStones": [
+  "G12",
+  "H12",
+  "J12",
+  "K12",
+  "K11",
+  "L12"
+ ],
+ "meta": {
+  "attackerPassNeeded": true,
+  "defenderPassNeeded": false,
+  "eyespaceSize": 5,
+  "liberties": 5,
+  "baseIndex": 140,
+  "gameIdx": 331,
+  "flipMove": 140,
+  "source": "pass-probe",
+  "rewindUsed": 0,
+  "quality": 31,
+  "qualityComponents": {
+   "extraSolutions": -20.0,
+   "regionArea": -0.0,
+   "ambiguity": -0.0,
+   "locality": -5.3,
+   "wall": -0.0,
+   "groupSize": -0.0,
+   "edge": 8.0,
+   "obviousness": -30.0,
+   "enclosure": -27.0,
+   "eyespace": 5.0
+  },
+  "koSuspect": false,
+  "solutionPrior": 0.982,
+  "settledBy": [
+   "B",
+   "H10"
+  ],
+  "bensonAlive": false,
+  "finalized": {
+   "visits": 1500,
+   "margin": 2,
+   "deepPlies": 24
+  }
+ },
+ "explanationLines": [
+  {
+   "seq": [
+    [
+     "W",
+     "H13"
+    ]
+   ],
+   "groupScore": 0.995,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "J13"
+    ]
+   ],
+   "groupScore": 0.998,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "K13"
+    ]
+   ],
+   "groupScore": 0.998,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "G13"
+    ],
+    [
+     "B",
+     "H13"
+    ]
+   ],
+   "groupScore": 0.999,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "M13"
+    ]
+   ],
+   "groupScore": 0.999,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "N13"
+    ]
+   ],
+   "groupScore": 0.999,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "G11"
+    ]
+   ],
+   "groupScore": 0.999,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "H11"
+    ]
+   ],
+   "groupScore": 0.999,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "J11"
+    ]
+   ],
+   "groupScore": 0.999,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "M11"
+    ]
+   ],
+   "groupScore": 0.999,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "N11"
+    ]
+   ],
+   "groupScore": 0.999,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "L10"
+    ]
+   ],
+   "groupScore": 0.999,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "K9"
+    ]
+   ],
+   "groupScore": 0.999,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "M9"
+    ]
+   ],
+   "groupScore": 0.999,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "N9"
+    ]
+   ],
+   "groupScore": 0.999,
+   "result": "alive"
+  }
+ ],
+ "weakSolution": {
+  "attackTries": [
+   {
+    "seq": [
+     [
+      "W",
+      "G13"
+     ],
+     [
+      "B",
+      "H13"
+     ]
+    ],
+    "groupScore": 0.999,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "H13"
+     ]
+    ],
+    "groupScore": 0.995,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "J13"
+     ]
+    ],
+    "groupScore": 0.998,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "K13"
+     ]
+    ],
+    "groupScore": 0.998,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "M13"
+     ]
+    ],
+    "groupScore": 0.999,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "N13"
+     ]
+    ],
+    "groupScore": 0.999,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "G11"
+     ]
+    ],
+    "groupScore": 0.999,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "H11"
+     ]
+    ],
+    "groupScore": 0.999,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "J11"
+     ]
+    ],
+    "groupScore": 0.999,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "M11"
+     ]
+    ],
+    "groupScore": 0.999,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "N11"
+     ]
+    ],
+    "groupScore": 0.999,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": 0.999,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "K9"
+     ]
+    ],
+    "groupScore": 0.999,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "M9"
+     ]
+    ],
+    "groupScore": 0.999,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": 0.999,
+    "result": "alive",
+    "ko": false
+   }
+  ]
+ }
+}

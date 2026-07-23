@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Life &amp; Death — status trainer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wordmark">死活 <span>status trainer</span></div>
+  <div class="hright">
+    <button id="viewtoggle" class="plate" style="display:none;cursor:pointer"></button>
+    <span id="plate" class="plate"></span>
+    <span id="counter" class="plate playeronly"></span>
+    <span id="qmeta" class="plate reviewonly"></span>
+  </div>
+</header>
+
+<main>
+  <section class="boardwrap">
+    <canvas id="board"></canvas>
+    <div id="stamp" class="stamp"></div>
+  </section>
+
+  <aside class="panel">
+    <div id="msg" class="msg"></div>
+
+    <div id="judge" class="judge">
+      <button id="btnAlive"  class="j alive">Unconditionally alive</button>
+      <button id="btnDead"   class="j dead">Unconditionally dead</button>
+      <button id="btnUndec"  class="j undec">Undecided</button>
+    </div>
+
+    <div id="stepbar" class="phasebar"></div>
+    <div id="phasebar" class="phasebar"></div>
+    <div id="lines" class="linelist"></div>
+
+    <div id="meta" class="meta reviewonly"></div>
+
+    <div class="review-actions reviewonly">
+      <button id="btnAccept" class="accept">Accept <kbd>a</kbd></button>
+      <button id="btnReject" class="reject">Reject <kbd>r</kbd></button>
+    </div>
+
+    <div class="nav playeronly">
+      <button id="btnPrev">← Prev</button>
+      <button id="btnNext">Next →</button>
+    </div>
+
+    <p class="foot">Lines are precomputed by KataGo — the page does no live
+      calculation. Triangles mark the group under discussion.</p>
+  </aside>
+</main>
+
+<script src="goban.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
