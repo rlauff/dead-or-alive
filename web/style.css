@@ -128,3 +128,13 @@ body.review .reviewonly { display: flex; }
 body.review .meta.reviewonly { display: block; }
 body.review span.reviewonly { display: inline; }
 body.review .playeronly { display: none; }
+
+/* barely-there entry point for trusted reviewers */
+#revlink { position: fixed; right: 6px; bottom: 4px; color: #3a4048;
+           text-decoration: none; font-size: 18px; line-height: 1;
+           opacity: .35; }
+#revlink:hover { opacity: 1; color: #57b891; }
+.login { display: flex; flex-direction: column; gap: 8px; max-width: 260px; }
+.login input { padding: 7px 9px; border-radius: 6px; border: 1px solid #2b3038;
+               background: #14161a; color: #e8e2d4; }
+.login #lg-msg { color: #c8553d; font-size: 13px; min-height: 16px; }

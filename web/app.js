@@ -82,6 +82,8 @@ function toggleView() {
 async function init() {
   document.body.classList.toggle("review", REVIEW);
   if (REVIEW) {
+    const who = await fetch("/api/whoami").then(r => r.json()).catch(() => null);
+    if (!who || !who.authenticated) return showLogin();
     pollReview();
     setInterval(refreshStats, 4000);
   } else {
@@ -141,6 +143,35 @@ async function fetchProblem(key) {
   const p = await r.json();
   state.cache[key] = p;
   return p;
+}
+
+/* Reviewer sign-in.  The password is checked on the SERVER — this form only
+   posts it; there is no secret in the page and no client-side gate. */
+function showLogin() {
+  $("lines").innerHTML = "";
+  $("stepbar").innerHTML = "";
+  const box = document.createElement("div");
+  box.className = "login";
+  box.innerHTML =
+    '<h3>Reviewer sign-in</h3>' +
+    '<input id="lg-name" placeholder="name" autocomplete="username">' +
+    '<input id="lg-pass" type="password" placeholder="password" ' +
+    'autocomplete="current-password">' +
+    '<button id="lg-go">Sign in</button><div id="lg-msg"></div>';
+  $("lines").appendChild(box);
+  setMsg("This area is for trusted reviewers.", "info");
+  const go = async () => {
+    const r = await fetch("/api/login", {
+      method: "POST",
+      body: JSON.stringify({ name: $("lg-name").value,
+                             password: $("lg-pass").value }),
+    });
+    const d = await r.json().catch(() => ({}));
+    if (r.ok && d.ok) { $("lines").innerHTML = ""; pollReview(); }
+    else $("lg-msg").textContent = d.error || "sign-in failed";
+  };
+  $("lg-go").onclick = go;
+  $("lg-pass").onkeydown = e => { if (e.key === "Enter") go(); };
 }
 
 async function pollReview() {

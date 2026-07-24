@@ -1,0 +1,8 @@
+reviewers.txt
+review-log.jsonl
+__pycache__/
+analysis_logs/
+candidates/*.json
+rejected/*.json
+web/problems/
+web/manifest*.json
