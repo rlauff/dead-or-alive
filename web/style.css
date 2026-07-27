@@ -138,3 +138,10 @@ body.review .playeronly { display: none; }
 .login input { padding: 7px 9px; border-radius: 6px; border: 1px solid #2b3038;
                background: #14161a; color: #e8e2d4; }
 .login #lg-msg { color: #c8553d; font-size: 13px; min-height: 16px; }
+
+/* folded list of precomputed lines */
+.linefold > summary { cursor: pointer; color: #8b93a1; font-size: 13px;
+                      padding: 4px 0; user-select: none; }
+.linefold > summary:hover { color: #57b891; }
+.linefold[open] > summary { margin-bottom: 6px; }
+.linefold > div { max-height: 40vh; overflow-y: auto; }

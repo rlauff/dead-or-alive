@@ -1,6 +1,10 @@
 {
  "problems": [
+  "g001p074_alive_89d92d82.json",
+  "g001p074_undecided_3f5dba73.json",
   "g002p104_undecided_39f62453.json",
+  "g003p089_alive_a42d2ffe.json",
+  "g003p089_undecided_b7d0d3f2.json",
   "g004m039_undecided_cfc0b109.json",
   "g004m109_undecided_e2179491.json",
   "g005p071_alive_37124bb3.json",
@@ -8,6 +12,9 @@
   "g005p071_undecided_994f01e3.json",
   "g006p077_alive_b0c84d4d.json",
   "g007p053_dead_d0fe68db.json",
+  "g007p077_alive_ae400669.json",
+  "g007p077_undecided_003a9a19.json",
+  "g007p110_dead_ce91b929.json",
   "g008p035_alive_b4e3bbef.json",
   "g008p047_alive_3df8159b.json",
   "g011p155_alive_f627f5fc.json",
@@ -61,5 +68,5 @@
   "sample_dead_str3.json",
   "sample_undecided_str3.json"
  ],
- "count": 60
+ "count": 67
 }

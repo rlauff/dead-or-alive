@@ -13,7 +13,12 @@
  */
 "use strict";
 
-const REVIEW = new URLSearchParams(location.search).get("review") === "1";
+const REVIEW = new URLSearchParams(location.search).has("review");
+// On the deployed site the review API is review.cgi; when the page is being
+// served by review_server.py on localhost it is that server's /api/.
+const LOCAL_SERVER = ["localhost", "127.0.0.1"].includes(location.hostname);
+const API = action => LOCAL_SERVER ? `api/${action}`
+                                   : `review.cgi?action=${action}`;
 
 const $ = id => document.getElementById(id);
 const boardEl = $("board");
@@ -82,8 +87,6 @@ function toggleView() {
 async function init() {
   document.body.classList.toggle("review", REVIEW);
   if (REVIEW) {
-    const who = await fetch("/api/whoami").then(r => r.json()).catch(() => null);
-    if (!who || !who.authenticated) return showLogin();
     pollReview();
     setInterval(refreshStats, 4000);
   } else {
@@ -145,37 +148,8 @@ async function fetchProblem(key) {
   return p;
 }
 
-/* Reviewer sign-in.  The password is checked on the SERVER — this form only
-   posts it; there is no secret in the page and no client-side gate. */
-function showLogin() {
-  $("lines").innerHTML = "";
-  $("stepbar").innerHTML = "";
-  const box = document.createElement("div");
-  box.className = "login";
-  box.innerHTML =
-    '<h3>Reviewer sign-in</h3>' +
-    '<input id="lg-name" placeholder="name" autocomplete="username">' +
-    '<input id="lg-pass" type="password" placeholder="password" ' +
-    'autocomplete="current-password">' +
-    '<button id="lg-go">Sign in</button><div id="lg-msg"></div>';
-  $("lines").appendChild(box);
-  setMsg("This area is for trusted reviewers.", "info");
-  const go = async () => {
-    const r = await fetch("/api/login", {
-      method: "POST",
-      body: JSON.stringify({ name: $("lg-name").value,
-                             password: $("lg-pass").value }),
-    });
-    const d = await r.json().catch(() => ({}));
-    if (r.ok && d.ok) { $("lines").innerHTML = ""; pollReview(); }
-    else $("lg-msg").textContent = d.error || "sign-in failed";
-  };
-  $("lg-go").onclick = go;
-  $("lg-pass").onkeydown = e => { if (e.key === "Enter") go(); };
-}
-
 async function pollReview() {
-  const r = await fetch("/api/next", { cache: "no-store" });
+  const r = await fetch(API("next"), { cache: "no-store" });
   const d = await r.json();
   if (d.empty) {
     state.problem = null;
@@ -194,7 +168,7 @@ async function pollReview() {
 
 async function refreshStats() {
   if (!REVIEW) return;
-  const r = await fetch("/api/stats", { cache: "no-store" });
+  const r = await fetch(API("stats"), { cache: "no-store" });
   const s = await r.json();
   $("qmeta").textContent =
     `queue: ${s.pending} · accepted: ${s.accepted} · rejected: ${s.rejected}`;
@@ -202,7 +176,7 @@ async function refreshStats() {
 
 async function decide(accept) {
   if (!state.candFile) return;
-  await fetch("/api/decision", {
+  await fetch(API("decision"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ file: state.candFile, accept }),
@@ -642,12 +616,22 @@ function explore() {
   state.follow = null;
   const box = $("lines");
   box.innerHTML = "";
+  // the precomputed list can run to hundreds of lines: keep it folded away
+  const det = document.createElement("details");
+  det.className = "linefold";
+  const sum = document.createElement("summary");
+  det.appendChild(sum);
+  box.appendChild(det);
+  const host = document.createElement("div");
+  det.appendChild(host);
+  let count = 0;
   const add = (title, seq, tag) => {
     const b = document.createElement("button");
     b.className = "line";
     b.innerHTML = `<span class="tag ${tag}">${tag}</span> ${title}`;
-    b.onclick = () => { playLine(seq, title + "."); updateExploreHover(); };
-    box.appendChild(b);
+    b.onclick = () => playLine(seq, title + ".");
+    host.appendChild(b);
+    count++;
   };
   if (p.status === "undecided") {
     for (const l of p.killing.lines)
@@ -666,13 +650,16 @@ function explore() {
         const d = document.createElement("div");
         d.className = "line";
         d.innerHTML = `<span class="tag ${tag}">${tag}</span> ${l.note || "(no line)"}`;
-        box.appendChild(d);
+        host.appendChild(d);
+        count++;
         return;
       }
       add(l.note || `Try ${i + 1}: ${l.seq[0][1]} → group ${l.result}`, l.seq, tag);
     });
   }
-  if (!box.children.length) {
+  sum.textContent = `${count} precomputed line${count === 1 ? "" : "s"}`;
+  if (!count) {
+    box.innerHTML = "";
     setMsg("No stored lines for this one.", "warn");
     goban.interactive = false;
     state.phase = "done";
