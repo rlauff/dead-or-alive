@@ -174,12 +174,15 @@ function retryPoll(ms) {
 
 /* review.cgi reports configuration trouble in `warnings` rather than
    failing, so that a half-broken deployment is visible instead of just
-   looking like an empty queue. */
+   looking like an empty queue.  `awaiting_apply` counts decisions that have
+   been recorded but not yet carried out: the CGI cannot move files on the
+   live server, so rebuild_manifests.py does it afterwards. */
 function setQMeta(d) {
   const n = (d.warnings || []).length;
   $("qmeta").textContent =
     `queue: ${d.pending ?? "?"} · accepted: ${d.accepted ?? "?"}` +
     (d.rejected == null ? "" : ` · rejected: ${d.rejected}`) +
+    (d.awaiting_apply ? ` · to apply: ${d.awaiting_apply}` : "") +
     (n ? ` · ⚠ ${n}` : "");
   if (n) console.warn("review.cgi:", ...d.warnings);
 }
@@ -216,6 +219,9 @@ async function pollReview() {
     state.candFile = null;
     setQMeta(d);
     if ((d.warnings || []).length) setMsg(d.warnings.join("  ·  "), "warn");
+    else if (d.awaiting_apply)
+      setMsg(`Queue reviewed — ${d.awaiting_apply} decision(s) recorded and ` +
+             `waiting for rebuild_manifests.py to be run on the server.`, "good");
     else setMsg(`No candidates in ${d.dir || "candidates/"} — the generator ` +
                 `will drop them in as it finds them.`, "info");
     return retryPoll(2500);
