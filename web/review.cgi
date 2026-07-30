@@ -1,24 +1,29 @@
 #!/usr/bin/python3
 """Review API as a single CGI script, for hosts where no daemon can run.
 
-Layout expected (everything relative to THIS file, so it works in any
-subdirectory of the web root):
+Layout expected (this file lives in web/; the problem data sits in sibling
+directories one level up, so it works in any subdirectory of the web root):
 
-    dead_or_alive/
-        review.cgi          <- this file, chmod 755
-        review-key.txt      <- sha256 hex of the shared secret, chmod 644
-        index.html, app.js, ...
-        manifest.json       <- players' index (accepted + finalized)
-        manifest-candidates.json
-        problems/           <- published problem JSON
-        candidates/         <- awaiting review
-        accepted/           <- accepted, live for players
+    dead-or-alive/
+        web/
+            review.cgi                <- this file, chmod 755
+            index.html, app.js, ...
+            manifest.json             <- players' index (indexes accepted/)
+            manifest-candidates.json  <- indexes candidates/
+        candidates/                   <- awaiting review
+        accepted/                     <- accepted, live for players
         rejected/
+        review-log.jsonl
 
 There is no authentication: the review UI is simply not linked from the
 page, so it is only reached by typing ?review on the end of the URL.  That
 keeps it out of the way of ordinary visitors; it does NOT keep out anyone
 who is actually looking.  Every decision is appended to review-log.jsonl.
+
+The manifests are pure directory indexes (the web server cannot list a
+directory, so the player needs them).  They are rebuilt from the actual
+directory contents on every request, which makes them self-healing: a stale
+manifest published by update.sh is corrected as soon as this script runs.
 """
 import json
 import os
@@ -28,12 +33,19 @@ import time
 import urllib.parse
 from pathlib import Path
 
-HERE = Path(__file__).resolve().parent
-CANDIDATES = HERE / "candidates"
-ACCEPTED = HERE / "accepted"
-REJECTED = HERE / "rejected"
-PUBLISHED = HERE / "problems"
-LOG = HERE / "review-log.jsonl"
+HERE = Path(__file__).resolve().parent          # .../dead-or-alive/web
+ROOT = HERE.parent                              # .../dead-or-alive
+CANDIDATES = ROOT / "candidates"
+ACCEPTED = ROOT / "accepted"
+REJECTED = ROOT / "rejected"
+LOG = ROOT / "review-log.jsonl"
+
+# pool name -> (directory, manifest file served to the browser)
+POOLS = {
+    "accepted": (ACCEPTED, HERE / "manifest.json"),
+    "candidates": (CANDIDATES, HERE / "manifest-candidates.json"),
+    "rejected": (REJECTED, HERE / "manifest-rejected.json"),
+}
 
 
 def reply(obj, status="200 OK"):
@@ -47,25 +59,21 @@ def reply(obj, status="200 OK"):
     sys.exit(0)
 
 
-def manifest_file(kind: str) -> Path:
-    return HERE / ("manifest.json" if kind == "accepted"
-                   else f"manifest-{kind}.json")
+def names(directory: Path):
+    return sorted(p.name for p in directory.glob("*.json"))
 
 
-def load_manifest(path: Path):
-    if not path.exists():
-        return []
-    try:
-        d = json.loads(path.read_text())
-    except json.JSONDecodeError:
-        return []
-    return list(d) if isinstance(d, list) else list(d.get("problems", []))
-
-
-def save_manifest(path: Path, names):
-    uniq = sorted(set(names))
-    path.write_text(json.dumps({"problems": uniq, "count": len(uniq)},
-                               indent=1))
+def sync_manifests():
+    """Rewrite each manifest from its directory, but only when it changed."""
+    for directory, path in POOLS.values():
+        want = names(directory)
+        body = json.dumps({"problems": want, "count": len(want)}, indent=1)
+        try:
+            if path.exists() and path.read_text() == body:
+                continue
+            path.write_text(body)
+        except OSError:
+            pass            # read-only deployment: serve what is on disk
 
 
 def main():
@@ -82,28 +90,11 @@ def main():
     else:
         data = {}
 
-    for d in (CANDIDATES, ACCEPTED, REJECTED, PUBLISHED):
-        d.mkdir(exist_ok=True)
-
-    if action == "stats":
-        reply({"pending": len(list(CANDIDATES.glob("*.json"))),
-               "accepted": len(list(ACCEPTED.glob("*.json"))),
-               "rejected": len(list(REJECTED.glob("*.json")))})
-
-    if action == "next":
-        files = sorted(CANDIDATES.glob("*.json"))
-        if not files:
-            reply({"empty": True,
-                   "accepted": len(list(ACCEPTED.glob("*.json")))})
-        f = files[0]
+    for d in (CANDIDATES, ACCEPTED, REJECTED):
         try:
-            problem = json.loads(f.read_text())
-        except json.JSONDecodeError:
-            reply({"error": f"unreadable candidate {f.name}"},
-                  "500 Internal Server Error")
-        reply({"file": f.name, "problem": problem,
-               "pending": len(files),
-               "accepted": len(list(ACCEPTED.glob("*.json")))})
+            d.mkdir(exist_ok=True)
+        except OSError:
+            pass
 
     if action == "decision":
         name = Path(str(data.get("file", ""))).name      # no path tricks
@@ -113,23 +104,6 @@ def main():
         accept = bool(data.get("accept"))
         shutil.move(str(src), str((ACCEPTED if accept else REJECTED) / name))
 
-        # a problem is only listed once finalize.py has verified and
-        # published it; accepting such a candidate just moves its entry
-        cand_mf, acc_mf = manifest_file("candidates"), manifest_file("accepted")
-        cand = load_manifest(cand_mf)
-        moved = name in cand
-        if moved:
-            cand.remove(name)
-            save_manifest(cand_mf, cand)
-            if accept:
-                acc = load_manifest(acc_mf)
-                acc.append(name)
-                save_manifest(acc_mf, acc)
-            else:
-                pub = PUBLISHED / name
-                if pub.exists():
-                    pub.unlink()
-
         with LOG.open("a") as fh:
             fh.write(json.dumps({
                 "time": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
@@ -138,9 +112,30 @@ def main():
                 "ip": os.environ.get("REMOTE_ADDR", "?"),
             }) + "\n")
 
-        reply({"ok": True, "manifested": moved,
-               "pending": len(list(CANDIDATES.glob("*.json"))),
-               "accepted": len(list(ACCEPTED.glob("*.json")))})
+    sync_manifests()
+
+    if action in ("stats", "decision"):
+        out = {"pending": len(names(CANDIDATES)),
+               "accepted": len(names(ACCEPTED)),
+               "rejected": len(names(REJECTED))}
+        if action == "decision":
+            out["ok"] = True
+        reply(out)
+
+    if action == "next":
+        files = names(CANDIDATES)
+        if not files:
+            reply({"empty": True, "pending": 0,
+                   "accepted": len(names(ACCEPTED))})
+        f = CANDIDATES / files[0]
+        try:
+            problem = json.loads(f.read_text())
+        except json.JSONDecodeError:
+            reply({"error": f"unreadable candidate {f.name}"},
+                  "500 Internal Server Error")
+        reply({"file": f.name, "problem": problem,
+               "pending": len(files),
+               "accepted": len(names(ACCEPTED))})
 
     reply({"error": f"unknown action {action}"}, "400 Bad Request")
 

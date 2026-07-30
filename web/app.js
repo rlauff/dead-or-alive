@@ -1,8 +1,8 @@
 /* App state machine.
  *
  * Modes:
- *   player  — loads problems.json, shuffled; no accept/reject.
- *   review  — ?review=1; polls /api/next, shows metadata and
+ *   player  — loads the accepted pool, shuffled; no accept/reject.
+ *   review  — ?review; polls review.cgi, shows metadata and
  *             accept/reject buttons (keys: a / r).
  *
  * Phases per problem:
@@ -13,18 +13,37 @@
  */
 "use strict";
 
-const REVIEW = new URLSearchParams(location.search).has("review");
-// On the deployed site the review API is review.cgi; when the page is being
-// served by review_server.py on localhost it is that server's /api/.
-const LOCAL_SERVER = ["localhost", "127.0.0.1"].includes(location.hostname);
-const API = action => LOCAL_SERVER ? `api/${action}`
-                                   : `review.cgi?action=${action}`;
+const QS = new URLSearchParams(location.search);
+// Reviewing needs no credentials: append ?review to the URL.  The review UI
+// is simply not linked from the page; that keeps it out of the way of
+// ordinary visitors, it does not keep out anyone who is actually looking.
+const REVIEW = QS.has("review");
+const API = action => `review.cgi?action=${action}`;
+
+/* Repository / deployment layout — this page lives in web/, the problem
+ * data sits in sibling directories one level up:
+ *
+ *     dead-or-alive/
+ *         web/          index.html, app.js, review.cgi, manifest*.json
+ *         candidates/   awaiting review
+ *         accepted/     live for players
+ *         rejected/
+ *
+ * manifest.json indexes accepted/, manifest-candidates.json indexes
+ * candidates/ — the server cannot list a directory, so the manifests are
+ * the index.  review.cgi keeps them in step with the directories. */
+const POOL = {
+  accepted:   { manifest: "manifest.json",            dir: "../accepted" },
+  candidates: { manifest: "manifest-candidates.json", dir: "../candidates" },
+  rejected:   { manifest: "manifest-rejected.json",   dir: "../rejected" },
+};
 
 const $ = id => document.getElementById(id);
 const boardEl = $("board");
 
 const state = {
   pool: [],          // filenames (manifest mode) or indices (inline mode)
+  dir: POOL.accepted.dir,  // directory the pool's filenames live in
   inline: null,      // the inline problems.json array, when used
   cache: {},         // filename -> fetched problem
   idx: 0,
@@ -92,39 +111,38 @@ async function init() {
   } else {
     const ok = await loadPool();
     if (!ok) {
-      setMsg("No problems yet. Generate and accept some first (see README).", "warn");
+      setMsg("No problems yet — web/manifest.json is missing or empty. " +
+             "Accept some candidates first (open this page with ?review).", "warn");
       return;
     }
     loadProblem(0);
   }
 }
 
-/* The player may run on a static/restricted server that cannot list a
-   directory, so manifest.json IS the index: finalize.py writes the
-   filename of every problem it publishes into it, and problems are then
-   fetched one at a time by name.  Falls back to the inline problems.json
-   pool (what review_server.py builds) when no manifest is present. */
+/* Load the index of problem filenames, then fetch problems one at a time
+   by name out of the matching directory.  ?pool=candidates reviews the
+   unreviewed queue instead of the accepted pool.  Falls back to the inline
+   problems.json (hand-made samples, sitting next to this file) when the
+   manifest is missing or empty. */
 async function loadPool() {
-  // ?pool=candidates loads manifest-candidates.json (unreviewed problems
-  // finalized straight out of candidates/); default is manifest.json
-  const poolName = new URLSearchParams(location.search).get("pool");
-  const manifests = poolName ? [`manifest-${poolName}.json`] : ["manifest.json"];
-  for (const mf of manifests) {
-    try {
-      const r = await fetch(mf, { cache: "no-store" });
-      if (r.ok) {
-        const m = await r.json();
-        const names = Array.isArray(m) ? m : (m.problems || []);
-        if (names.length) {
-          state.pool = names.slice();
-          state.inline = null;
-          shuffle(state.pool);
-          return true;
-        }
+  const asked = QS.get("pool");
+  const spec = POOL[asked || "accepted"];
+  if (asked && !spec) return false;             // unknown pool name
+  try {
+    const r = await fetch(spec.manifest, { cache: "no-store" });
+    if (r.ok) {
+      const m = await r.json();
+      const names = Array.isArray(m) ? m : (m.problems || []);
+      if (names.length) {
+        state.pool = names.slice();
+        state.dir = spec.dir;
+        state.inline = null;
+        shuffle(state.pool);
+        return true;
       }
-    } catch (e) { /* try the next source */ }
-  }
-  if (poolName) return false;   // explicit pool asked for and not found
+    }
+  } catch (e) { /* fall through to the inline pool */ }
+  if (asked) return false;      // explicit pool asked for and not found
   try {
     const r = await fetch("problems.json", { cache: "no-store" });
     const arr = await r.json();
@@ -141,7 +159,7 @@ async function loadPool() {
 async function fetchProblem(key) {
   if (state.inline) return state.inline[key];
   if (state.cache[key]) return state.cache[key];
-  const r = await fetch(`problems/${key}`, { cache: "no-store" });
+  const r = await fetch(`${state.dir}/${key}`, { cache: "no-store" });
   if (!r.ok) throw new Error(`cannot load ${key}`);
   const p = await r.json();
   state.cache[key] = p;
@@ -195,7 +213,7 @@ async function loadProblem(i) {
     const p = await fetchProblem(key);
     setProblem(p);
   } catch (e) {
-    setMsg(`Could not load ${key}.`, "warn");
+    setMsg(`Could not load ${state.dir}/${key}.`, "warn");
     return;
   }
   $("counter").textContent = `${state.idx + 1} / ${n}`;
