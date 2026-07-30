@@ -1,0 +1,9545 @@
+{
+ "id": "g158p062_undecided_9894ef9b",
+ "boardSize": 13,
+ "rules": "chinese",
+ "komi": 7.5,
+ "initialStones": [
+  [
+   "W",
+   "D12"
+  ],
+  [
+   "W",
+   "J12"
+  ],
+  [
+   "W",
+   "K12"
+  ],
+  [
+   "B",
+   "L12"
+  ],
+  [
+   "B",
+   "M12"
+  ],
+  [
+   "B",
+   "B11"
+  ],
+  [
+   "B",
+   "C11"
+  ],
+  [
+   "W",
+   "D11"
+  ],
+  [
+   "W",
+   "J11"
+  ],
+  [
+   "B",
+   "K11"
+  ],
+  [
+   "B",
+   "L11"
+  ],
+  [
+   "W",
+   "C10"
+  ],
+  [
+   "B",
+   "D10"
+  ],
+  [
+   "W",
+   "E10"
+  ],
+  [
+   "W",
+   "J10"
+  ],
+  [
+   "W",
+   "K10"
+  ],
+  [
+   "W",
+   "M10"
+  ],
+  [
+   "W",
+   "C9"
+  ],
+  [
+   "B",
+   "D9"
+  ],
+  [
+   "B",
+   "E9"
+  ],
+  [
+   "B",
+   "M9"
+  ],
+  [
+   "W",
+   "C8"
+  ],
+  [
+   "W",
+   "D7"
+  ],
+  [
+   "W",
+   "E7"
+  ],
+  [
+   "W",
+   "F7"
+  ],
+  [
+   "W",
+   "G7"
+  ],
+  [
+   "W",
+   "H7"
+  ],
+  [
+   "W",
+   "J7"
+  ],
+  [
+   "W",
+   "M7"
+  ],
+  [
+   "B",
+   "C6"
+  ],
+  [
+   "B",
+   "D6"
+  ],
+  [
+   "W",
+   "E6"
+  ],
+  [
+   "B",
+   "F6"
+  ],
+  [
+   "B",
+   "G6"
+  ],
+  [
+   "B",
+   "H6"
+  ],
+  [
+   "B",
+   "J6"
+  ],
+  [
+   "W",
+   "K6"
+  ],
+  [
+   "W",
+   "L6"
+  ],
+  [
+   "W",
+   "N6"
+  ],
+  [
+   "B",
+   "C5"
+  ],
+  [
+   "B",
+   "E5"
+  ],
+  [
+   "W",
+   "F5"
+  ],
+  [
+   "B",
+   "G5"
+  ],
+  [
+   "B",
+   "K5"
+  ],
+  [
+   "B",
+   "L5"
+  ],
+  [
+   "W",
+   "M5"
+  ],
+  [
+   "B",
+   "D4"
+  ],
+  [
+   "B",
+   "H4"
+  ],
+  [
+   "B",
+   "J4"
+  ],
+  [
+   "B",
+   "K4"
+  ],
+  [
+   "W",
+   "L4"
+  ],
+  [
+   "B",
+   "M4"
+  ],
+  [
+   "B",
+   "D3"
+  ],
+  [
+   "B",
+   "K3"
+  ],
+  [
+   "W",
+   "L3"
+  ],
+  [
+   "B",
+   "M3"
+  ],
+  [
+   "W",
+   "L2"
+  ],
+  [
+   "B",
+   "M2"
+  ]
+ ],
+ "toMove": "W",
+ "status": "undecided",
+ "targetColor": "B",
+ "targetStones": [
+  "K11",
+  "L12",
+  "L11",
+  "M12"
+ ],
+ "meta": {
+  "attackerPassNeeded": true,
+  "defenderPassNeeded": false,
+  "eyespaceSize": 107,
+  "liberties": 5,
+  "baseIndex": 62,
+  "gameIdx": 158,
+  "flipMove": 62,
+  "source": "pass-probe",
+  "rewindUsed": 0,
+  "quality": 0,
+  "qualityComponents": {
+   "extraSolutions": -90.0,
+   "regionArea": -0.0,
+   "ambiguity": -0.7,
+   "locality": -4.0,
+   "wall": -0.0,
+   "groupSize": -0.0,
+   "edge": 8.0,
+   "obviousness": -14.7,
+   "enclosure": -63.8,
+   "eyespace": 0.0
+  },
+  "koSuspect": false,
+  "solutionPrior": 0.578,
+  "finalized": {
+   "visits": 1500,
+   "margin": 2,
+   "deepPlies": 24
+  }
+ },
+ "killing": {
+  "toMove": "W",
+  "moves": [
+   "L13",
+   "M13",
+   "L10",
+   "N10",
+   "L9",
+   "N9",
+   "M8",
+   "N8"
+  ],
+  "lines": [
+   {
+    "first": "L13",
+    "seq": [
+     [
+      "W",
+      "L13"
+     ]
+    ],
+    "groupScore": -0.936
+   },
+   {
+    "first": "M13",
+    "seq": [
+     [
+      "W",
+      "M13"
+     ]
+    ],
+    "groupScore": -0.941
+   },
+   {
+    "first": "L10",
+    "seq": [
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.981
+   },
+   {
+    "first": "N10",
+    "seq": [
+     [
+      "W",
+      "N10"
+     ]
+    ],
+    "groupScore": -0.946
+   },
+   {
+    "first": "L9",
+    "seq": [
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": -0.948
+   },
+   {
+    "first": "N9",
+    "seq": [
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.962
+   },
+   {
+    "first": "M8",
+    "seq": [
+     [
+      "W",
+      "M8"
+     ]
+    ],
+    "groupScore": -0.959
+   },
+   {
+    "first": "N8",
+    "seq": [
+     [
+      "W",
+      "N8"
+     ]
+    ],
+    "groupScore": -0.954
+   }
+  ]
+ },
+ "living": {
+  "toMove": "B",
+  "moves": [
+   "L10",
+   "E11",
+   "F10",
+   "F12",
+   "F11"
+  ],
+  "lines": [
+   {
+    "first": "L10",
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "M11"
+     ]
+    ],
+    "groupScore": -0.958
+   },
+   {
+    "first": "E11",
+    "seq": [
+     [
+      "B",
+      "E11"
+     ]
+    ],
+    "groupScore": -0.979
+   },
+   {
+    "first": "F10",
+    "seq": [
+     [
+      "B",
+      "F10"
+     ]
+    ],
+    "groupScore": -0.943
+   },
+   {
+    "first": "F12",
+    "seq": [
+     [
+      "B",
+      "F12"
+     ]
+    ],
+    "groupScore": -0.928
+   },
+   {
+    "first": "F11",
+    "seq": [
+     [
+      "B",
+      "F11"
+     ]
+    ],
+    "groupScore": -0.941
+   }
+  ]
+ },
+ "explanationLines": [
+  {
+   "seq": [
+    [
+     "W",
+     "M11"
+    ],
+    [
+     "B",
+     "L10"
+    ]
+   ],
+   "groupScore": 0.422,
+   "result": "unclear"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "N12"
+    ],
+    [
+     "B",
+     "L10"
+    ]
+   ],
+   "groupScore": 0.531,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "E11"
+    ],
+    [
+     "W",
+     "E12"
+    ]
+   ],
+   "groupScore": 0.685,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F10"
+    ],
+    [
+     "W",
+     "F12"
+    ],
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ]
+   ],
+   "groupScore": 0.703,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "H9"
+    ]
+   ],
+   "groupScore": 0.731,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "J13"
+    ]
+   ],
+   "groupScore": 0.739,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "N11"
+    ],
+    [
+     "B",
+     "L10"
+    ]
+   ],
+   "groupScore": 0.742,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F10"
+    ],
+    [
+     "W",
+     "F12"
+    ]
+   ],
+   "groupScore": 0.745,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "H11"
+    ]
+   ],
+   "groupScore": 0.751,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "E11"
+    ],
+    [
+     "W",
+     "E12"
+    ]
+   ],
+   "groupScore": 0.805,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "H12"
+    ]
+   ],
+   "groupScore": 0.829,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F10"
+    ],
+    [
+     "W",
+     "F12"
+    ],
+    [
+     "B",
+     "E11"
+    ],
+    [
+     "W",
+     "E12"
+    ]
+   ],
+   "groupScore": 0.841,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "K13"
+    ],
+    [
+     "B",
+     "L10"
+    ]
+   ],
+   "groupScore": 0.847,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "J9"
+    ]
+   ],
+   "groupScore": 0.855,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "H10"
+    ]
+   ],
+   "groupScore": 0.866,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "H13"
+    ],
+    [
+     "B",
+     "L10"
+    ]
+   ],
+   "groupScore": 0.868,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "N13"
+    ],
+    [
+     "B",
+     "L10"
+    ]
+   ],
+   "groupScore": 0.873,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F12"
+    ],
+    [
+     "W",
+     "E11"
+    ]
+   ],
+   "groupScore": 0.894,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "F10"
+    ],
+    [
+     "W",
+     "E11"
+    ]
+   ],
+   "groupScore": 0.894,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ]
+   ],
+   "groupScore": 0.915,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "N10"
+    ],
+    [
+     "W",
+     "L9"
+    ]
+   ],
+   "groupScore": 0.917,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F12"
+    ],
+    [
+     "W",
+     "E11"
+    ],
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "M11"
+    ],
+    [
+     "W",
+     "L9"
+    ]
+   ],
+   "groupScore": 0.92,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F10"
+    ],
+    [
+     "W",
+     "F12"
+    ],
+    [
+     "B",
+     "E12"
+    ],
+    [
+     "W",
+     "E11"
+    ]
+   ],
+   "groupScore": 0.92,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "M11"
+    ],
+    [
+     "W",
+     "L9"
+    ],
+    [
+     "B",
+     "F12"
+    ],
+    [
+     "W",
+     "E11"
+    ]
+   ],
+   "groupScore": 0.927,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "N9"
+    ],
+    [
+     "W",
+     "L9"
+    ],
+    [
+     "B",
+     "E11"
+    ],
+    [
+     "W",
+     "E12"
+    ]
+   ],
+   "groupScore": 0.929,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "M11"
+    ],
+    [
+     "W",
+     "L9"
+    ],
+    [
+     "B",
+     "N10"
+    ]
+   ],
+   "groupScore": 0.93,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "H9"
+    ],
+    [
+     "W",
+     "L9"
+    ]
+   ],
+   "groupScore": -0.932,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "N9"
+    ],
+    [
+     "W",
+     "L9"
+    ],
+    [
+     "B",
+     "H10"
+    ],
+    [
+     "W",
+     "N8"
+    ]
+   ],
+   "groupScore": -0.932,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F10"
+    ],
+    [
+     "W",
+     "F12"
+    ],
+    [
+     "B",
+     "E11"
+    ],
+    [
+     "W",
+     "E12"
+    ],
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ]
+   ],
+   "groupScore": 0.933,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "K9"
+    ],
+    [
+     "W",
+     "N9"
+    ]
+   ],
+   "groupScore": -0.934,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "N10"
+    ],
+    [
+     "W",
+     "L9"
+    ],
+    [
+     "B",
+     "F10"
+    ],
+    [
+     "W",
+     "E11"
+    ]
+   ],
+   "groupScore": 0.935,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "N9"
+    ],
+    [
+     "W",
+     "L9"
+    ],
+    [
+     "B",
+     "F10"
+    ],
+    [
+     "W",
+     "E11"
+    ]
+   ],
+   "groupScore": 0.937,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "L9"
+    ],
+    [
+     "W",
+     "N9"
+    ]
+   ],
+   "groupScore": -0.939,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "M11"
+    ],
+    [
+     "W",
+     "L9"
+    ]
+   ],
+   "groupScore": 0.94,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "N11"
+    ],
+    [
+     "W",
+     "N9"
+    ]
+   ],
+   "groupScore": -0.94,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "N9"
+    ],
+    [
+     "W",
+     "L9"
+    ],
+    [
+     "B",
+     "H12"
+    ],
+    [
+     "W",
+     "N8"
+    ]
+   ],
+   "groupScore": -0.94,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "N9"
+    ],
+    [
+     "W",
+     "L9"
+    ],
+    [
+     "B",
+     "H11"
+    ],
+    [
+     "W",
+     "N8"
+    ]
+   ],
+   "groupScore": -0.94,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F12"
+    ],
+    [
+     "W",
+     "E11"
+    ],
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "N10"
+    ],
+    [
+     "W",
+     "L9"
+    ]
+   ],
+   "groupScore": 0.94,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F12"
+    ],
+    [
+     "W",
+     "E11"
+    ],
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "K9"
+    ],
+    [
+     "W",
+     "N9"
+    ]
+   ],
+   "groupScore": -0.941,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "N9"
+    ],
+    [
+     "W",
+     "L9"
+    ],
+    [
+     "B",
+     "H9"
+    ],
+    [
+     "W",
+     "N8"
+    ]
+   ],
+   "groupScore": -0.942,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "N9"
+    ],
+    [
+     "W",
+     "L9"
+    ],
+    [
+     "B",
+     "K9"
+    ],
+    [
+     "W",
+     "L8"
+    ]
+   ],
+   "groupScore": 0.942,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "N9"
+    ],
+    [
+     "W",
+     "L9"
+    ],
+    [
+     "B",
+     "J9"
+    ],
+    [
+     "W",
+     "N8"
+    ]
+   ],
+   "groupScore": -0.943,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "N10"
+    ]
+   ],
+   "groupScore": -0.944,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F12"
+    ],
+    [
+     "W",
+     "E11"
+    ],
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "F10"
+    ],
+    [
+     "W",
+     "N9"
+    ]
+   ],
+   "groupScore": -0.944,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F12"
+    ],
+    [
+     "W",
+     "E11"
+    ],
+    [
+     "B",
+     "J13"
+    ],
+    [
+     "W",
+     "L10"
+    ],
+    [
+     "B",
+     "F10"
+    ],
+    [
+     "W",
+     "B7"
+    ]
+   ],
+   "groupScore": -0.944,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F10"
+    ],
+    [
+     "W",
+     "F12"
+    ],
+    [
+     "B",
+     "C7"
+    ],
+    [
+     "W",
+     "D8"
+    ],
+    [
+     "B",
+     "H9"
+    ],
+    [
+     "W",
+     "M8"
+    ]
+   ],
+   "groupScore": -0.944,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "J9"
+    ],
+    [
+     "W",
+     "N9"
+    ]
+   ],
+   "groupScore": -0.945,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F12"
+    ],
+    [
+     "W",
+     "E11"
+    ],
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ]
+   ],
+   "groupScore": 0.946,
+   "result": "alive"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F12"
+    ],
+    [
+     "W",
+     "E11"
+    ],
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "N11"
+    ],
+    [
+     "W",
+     "N9"
+    ]
+   ],
+   "groupScore": -0.948,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "L13"
+    ]
+   ],
+   "groupScore": -0.949,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "H10"
+    ],
+    [
+     "W",
+     "N9"
+    ]
+   ],
+   "groupScore": -0.949,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F10"
+    ],
+    [
+     "W",
+     "F12"
+    ],
+    [
+     "B",
+     "H9"
+    ],
+    [
+     "W",
+     "M8"
+    ]
+   ],
+   "groupScore": -0.95,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F12"
+    ],
+    [
+     "W",
+     "E11"
+    ],
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "H9"
+    ],
+    [
+     "W",
+     "N9"
+    ]
+   ],
+   "groupScore": -0.951,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "W",
+     "M13"
+    ]
+   ],
+   "groupScore": -0.952,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "K13"
+    ],
+    [
+     "W",
+     "L9"
+    ]
+   ],
+   "groupScore": -0.953,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F12"
+    ],
+    [
+     "W",
+     "E11"
+    ],
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "J9"
+    ],
+    [
+     "W",
+     "N9"
+    ]
+   ],
+   "groupScore": -0.953,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "F12"
+    ],
+    [
+     "W",
+     "E11"
+    ],
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "L9"
+    ],
+    [
+     "W",
+     "N9"
+    ]
+   ],
+   "groupScore": -0.953,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "H12"
+    ],
+    [
+     "W",
+     "N9"
+    ]
+   ],
+   "groupScore": -0.954,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "H11"
+    ],
+    [
+     "W",
+     "N9"
+    ]
+   ],
+   "groupScore": -0.954,
+   "result": "dead"
+  },
+  {
+   "seq": [
+    [
+     "B",
+     "L10"
+    ],
+    [
+     "W",
+     "M8"
+    ],
+    [
+     "B",
+     "N10"
+    ],
+    [
+     "W",
+     "L9"
+    ],
+    [
+     "B",
+     "E11"
+    ],
+    [
+     "W",
+     "E12"
+    ]
+   ],
+   "groupScore": 0.954,
+   "result": "alive"
+  }
+ ],
+ "weakSolution": {
+  "killTries": [
+   {
+    "seq": [
+     [
+      "W",
+      "H13"
+     ],
+     [
+      "B",
+      "L10"
+     ]
+    ],
+    "groupScore": 0.868,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "J13"
+     ]
+    ],
+    "groupScore": 0.739,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "K13"
+     ],
+     [
+      "B",
+      "L10"
+     ]
+    ],
+    "groupScore": 0.847,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "L13"
+     ]
+    ],
+    "groupScore": -0.949,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "M13"
+     ]
+    ],
+    "groupScore": -0.952,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "N13"
+     ],
+     [
+      "B",
+      "L10"
+     ]
+    ],
+    "groupScore": 0.873,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "H12"
+     ]
+    ],
+    "groupScore": 0.829,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "N12"
+     ],
+     [
+      "B",
+      "L10"
+     ]
+    ],
+    "groupScore": 0.531,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "H11"
+     ]
+    ],
+    "groupScore": 0.751,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "M11"
+     ],
+     [
+      "B",
+      "L10"
+     ]
+    ],
+    "groupScore": 0.422,
+    "result": "unclear",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "N11"
+     ],
+     [
+      "B",
+      "L10"
+     ]
+    ],
+    "groupScore": 0.742,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "H10"
+     ]
+    ],
+    "groupScore": 0.866,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "N10"
+     ]
+    ],
+    "groupScore": -0.944,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "H9"
+     ]
+    ],
+    "groupScore": 0.731,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "J9"
+     ]
+    ],
+    "groupScore": 0.855,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "K9"
+     ],
+     [
+      "B",
+      "L10"
+     ]
+    ],
+    "groupScore": 0.956,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": -0.96,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.958,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "W",
+      "M8"
+     ]
+    ],
+    "groupScore": -0.956,
+    "result": "dead",
+    "ko": false
+   }
+  ],
+  "liveTries": [
+   {
+    "seq": [
+     [
+      "B",
+      "H13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.976,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.976,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "K13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "M13"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.96,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "N13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "H12"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "N12"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "H11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "N11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.978,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "H10"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.976,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ]
+    ],
+    "groupScore": 0.915,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.978,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "H9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.974,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "J9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.976,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "K9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.976,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.973,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ]
+    ],
+    "groupScore": 0.745,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ]
+    ],
+    "groupScore": 0.685,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ]
+    ],
+    "groupScore": 0.894,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "H13"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.962,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": -0.956,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "K13"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": -0.953,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "L13"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": -0.958,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M13"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": -0.96,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N13"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": -0.962,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "H12"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.954,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N12"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": -0.959,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "H11"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.954,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": 0.94,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N11"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.94,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "H10"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.949,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": 0.917,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "H9"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": -0.932,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "J9"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.945,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "K9"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.934,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "L9"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.939,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": 0.968,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "E11"
+     ]
+    ],
+    "groupScore": 0.894,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ]
+    ],
+    "groupScore": 0.805,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "H13"
+     ],
+     [
+      "W",
+      "N8"
+     ]
+    ],
+    "groupScore": -0.955,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "N8"
+     ]
+    ],
+    "groupScore": -0.959,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "K13"
+     ],
+     [
+      "W",
+      "N8"
+     ]
+    ],
+    "groupScore": -0.959,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "L13"
+     ],
+     [
+      "W",
+      "N8"
+     ]
+    ],
+    "groupScore": -0.961,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "M13"
+     ],
+     [
+      "W",
+      "N8"
+     ]
+    ],
+    "groupScore": -0.961,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "N13"
+     ],
+     [
+      "W",
+      "N8"
+     ]
+    ],
+    "groupScore": -0.958,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "H12"
+     ],
+     [
+      "W",
+      "N8"
+     ]
+    ],
+    "groupScore": -0.94,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "N12"
+     ],
+     [
+      "W",
+      "N8"
+     ]
+    ],
+    "groupScore": -0.956,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "H11"
+     ],
+     [
+      "W",
+      "N8"
+     ]
+    ],
+    "groupScore": -0.94,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "M11"
+     ]
+    ],
+    "groupScore": 0.992,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "N11"
+     ]
+    ],
+    "groupScore": 0.99,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "H10"
+     ],
+     [
+      "W",
+      "N8"
+     ]
+    ],
+    "groupScore": -0.932,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "N10"
+     ]
+    ],
+    "groupScore": 0.988,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "H9"
+     ],
+     [
+      "W",
+      "N8"
+     ]
+    ],
+    "groupScore": -0.942,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "J9"
+     ],
+     [
+      "W",
+      "N8"
+     ]
+    ],
+    "groupScore": -0.943,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "K9"
+     ],
+     [
+      "W",
+      "L8"
+     ]
+    ],
+    "groupScore": 0.942,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ]
+    ],
+    "groupScore": 0.929,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "E11"
+     ]
+    ],
+    "groupScore": 0.937,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "H13"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.974,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "K13"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.976,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "L13"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.966,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "M13"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "N13"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.971,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "H12"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.972,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "N12"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.974,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "H11"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.973,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "N11"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.968,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "H10"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.971,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "N10"
+     ]
+    ],
+    "groupScore": 0.93,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "H9"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.971,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "J9"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.971,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "K9"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.972,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "N9"
+     ]
+    ],
+    "groupScore": 0.991,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ]
+    ],
+    "groupScore": 0.971,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "C12"
+     ]
+    ],
+    "groupScore": 0.968,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ]
+    ],
+    "groupScore": 0.927,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "H13"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.967,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.971,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "K13"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.972,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "L13"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.964,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "M13"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.971,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "N13"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.969,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "H12"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.968,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "N12"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.97,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "H11"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.966,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": 0.972,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "N11"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.967,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "H10"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.966,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "H9"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.963,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "J9"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.965,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "K9"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.969,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": 0.992,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ]
+    ],
+    "groupScore": 0.954,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "E11"
+     ]
+    ],
+    "groupScore": 0.935,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.955,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "H13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.973,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.97,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "K13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.973,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "M13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.974,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "H12"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.976,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N12"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.972,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "H11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.974,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.976,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.976,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "H10"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ]
+    ],
+    "groupScore": 0.946,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "H9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.972,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.974,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "K9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.973,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.973,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.97,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "F9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "C12"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "F11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "H13"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": -0.959,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": -0.96,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "K13"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": -0.959,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "L13"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": -0.959,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M13"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": -0.96,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N13"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": -0.962,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "H12"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.958,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N12"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": -0.954,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "H11"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.957,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": 0.92,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N11"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.948,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "H10"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.955,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": 0.94,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "H9"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.951,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "J9"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.953,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "K9"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.941,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "L9"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.953,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L9"
+     ]
+    ],
+    "groupScore": 0.98,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.944,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ],
+     [
+      "B",
+      "F9"
+     ],
+     [
+      "W",
+      "N9"
+     ]
+    ],
+    "groupScore": -0.954,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "H13"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.965,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "K13"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.966,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "L13"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.967,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "M13"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.964,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "N13"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.965,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "H12"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.971,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "N12"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.962,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "H11"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.969,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.969,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "N11"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.966,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "H10"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.966,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.968,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "H9"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.964,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "J9"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.964,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "K9"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.963,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "L9"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.965,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.965,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "B7"
+     ],
+     [
+      "W",
+      "B8"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "C12"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.96,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "F9"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.969,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.974,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.944,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "H13"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.964,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.964,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "K13"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.964,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "L13"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.964,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "M13"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.967,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "N13"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.962,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "H12"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.966,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "N12"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.96,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "H11"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.966,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.968,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "N11"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.966,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "H10"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.965,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.969,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "H9"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.96,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "J9"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.964,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "K9"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.966,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "L9"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.966,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "B7"
+     ],
+     [
+      "W",
+      "B8"
+     ]
+    ],
+    "groupScore": -0.973,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "K7"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.973,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "F9"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.972,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "C12"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.973,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ],
+     [
+      "B",
+      "L7"
+     ],
+     [
+      "W",
+      "B7"
+     ]
+    ],
+    "groupScore": -0.973,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "H13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "K13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "L13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.98,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "M13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "N13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "H12"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.976,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "N12"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "H11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.976,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.98,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "N11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.978,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "H10"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.978,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ]
+    ],
+    "groupScore": 0.703,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "H9"
+     ],
+     [
+      "W",
+      "M8"
+     ]
+    ],
+    "groupScore": -0.95,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "J9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.978,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "K9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "L9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.978,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ]
+    ],
+    "groupScore": 0.967,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ]
+    ],
+    "groupScore": 0.841,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ]
+    ],
+    "groupScore": 0.92,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "H13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.976,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.98,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "K13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.98,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "L13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.98,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "M13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.98,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "N13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "H12"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.976,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "N12"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.978,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "H11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.981,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "N11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "H10"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.978,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ]
+    ],
+    "groupScore": 0.98,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "H9"
+     ],
+     [
+      "W",
+      "M8"
+     ]
+    ],
+    "groupScore": -0.944,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "J9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.978,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "K9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "L9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ]
+    ],
+    "groupScore": 0.99,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ]
+    ],
+    "groupScore": 0.982,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "H13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "K13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.98,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "M13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "H12"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.976,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N12"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "H11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.981,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "H10"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ]
+    ],
+    "groupScore": 0.976,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "H9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "J9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.978,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "K9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.978,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "L9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.978,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.975,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "F11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.982,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "C12"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.982,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "B7"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.988,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E12"
+     ],
+     [
+      "W",
+      "E11"
+     ],
+     [
+      "B",
+      "D13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.976,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "H13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.978,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "J13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.98,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "K13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.981,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "L13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.982,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "M13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.981,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "N13"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.98,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "H12"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.978,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "N12"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.98,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "H11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "M11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.982,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "N11"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.98,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "H10"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.98,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "L10"
+     ],
+     [
+      "W",
+      "M8"
+     ]
+    ],
+    "groupScore": 0.933,
+    "result": "alive",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "N10"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.98,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "H9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "J9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.98,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "K9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.978,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "L9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.979,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "N9"
+     ],
+     [
+      "W",
+      "L10"
+     ]
+    ],
+    "groupScore": -0.977,
+    "result": "dead",
+    "ko": false
+   },
+   {
+    "seq": [
+     [
+      "B",
+      "F10"
+     ],
+     [
+      "W",
+      "F12"
+     ],
+     [
+      "B",
+      "E11"
+     ],
+     [
+      "W",
+      "E12"
+     ],
+     [
+      "B",
+      "C7"
+     ],
+     [
+      "W",
+      "D8"
+     ]
+    ],
+    "groupScore": 0.99,
+    "result": "alive",
+    "ko": false
+   }
+  ]
+ }
+}

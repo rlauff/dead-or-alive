@@ -1,7 +1,2 @@
-reviewers.txt
-reviewer-links.txt
-review-log.jsonl
 __pycache__/
 analysis_logs/
-candidates/*.json
-rejected/*.json
