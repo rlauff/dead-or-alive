@@ -166,39 +166,97 @@ async function fetchProblem(key) {
   return p;
 }
 
+let pollTimer = null;
+function retryPoll(ms) {
+  clearTimeout(pollTimer);
+  pollTimer = setTimeout(pollReview, ms);
+}
+
+/* review.cgi reports configuration trouble in `warnings` rather than
+   failing, so that a half-broken deployment is visible instead of just
+   looking like an empty queue. */
+function setQMeta(d) {
+  const n = (d.warnings || []).length;
+  $("qmeta").textContent =
+    `queue: ${d.pending ?? "?"} · accepted: ${d.accepted ?? "?"}` +
+    (d.rejected == null ? "" : ` · rejected: ${d.rejected}`) +
+    (n ? ` · ⚠ ${n}` : "");
+  if (n) console.warn("review.cgi:", ...d.warnings);
+}
+
 async function pollReview() {
-  const r = await fetch(API("next"), { cache: "no-store" });
-  const d = await r.json();
+  clearTimeout(pollTimer);
+  let res, text;
+  try {
+    res = await fetch(API("next"), { cache: "no-store" });
+    text = await res.text();
+  } catch (e) {
+    setMsg(`Cannot reach review.cgi — ${e.message}.`, "warn");
+    return retryPoll(5000);
+  }
+  let d;
+  try {
+    d = JSON.parse(text);
+  } catch (e) {
+    // Not JSON: the server handed back the script itself, or an error page.
+    setMsg(text.startsWith("#!")
+      ? "review.cgi was served as a plain file instead of being executed — " +
+        "CGI is not enabled for this directory (Apache: Options +ExecCGI, " +
+        "AddHandler cgi-script .cgi)."
+      : `review.cgi returned HTTP ${res.status} and not JSON.`, "warn");
+    return retryPoll(8000);
+  }
+  if (d.error) {
+    setMsg(`review.cgi: ${d.error}${d.hint ? " — " + d.hint : ""}`, "warn");
+    setQMeta(d);
+    return retryPoll(8000);
+  }
   if (d.empty) {
     state.problem = null;
     state.candFile = null;
-    setMsg("Waiting for candidates… the generator will drop them in as it finds them.", "info");
-    $("qmeta").textContent = `queue: ${d.pending || 0} · accepted: ${d.accepted || 0}`;
-    setTimeout(pollReview, 2500);
-    return;
+    setQMeta(d);
+    if ((d.warnings || []).length) setMsg(d.warnings.join("  ·  "), "warn");
+    else setMsg(`No candidates in ${d.dir || "candidates/"} — the generator ` +
+                `will drop them in as it finds them.`, "info");
+    return retryPoll(2500);
+  }
+  if (!d.problem) {
+    setMsg("review.cgi replied without a problem in it.", "warn");
+    return retryPoll(8000);
   }
   if (d.file !== state.candFile) {
     state.candFile = d.file;
     setProblem(d.problem);
-    $("qmeta").textContent = `queue: ${d.pending} · accepted: ${d.accepted}`;
+    setQMeta(d);
   }
 }
 
 async function refreshStats() {
   if (!REVIEW) return;
-  const r = await fetch(API("stats"), { cache: "no-store" });
-  const s = await r.json();
-  $("qmeta").textContent =
-    `queue: ${s.pending} · accepted: ${s.accepted} · rejected: ${s.rejected}`;
+  try {
+    const r = await fetch(API("stats"), { cache: "no-store" });
+    const s = await r.json();
+    if (!s.error) setQMeta(s);
+  } catch (e) { /* pollReview is the one that reports failures */ }
 }
 
 async function decide(accept) {
   if (!state.candFile) return;
-  await fetch(API("decision"), {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ file: state.candFile, accept }),
-  });
+  try {
+    const r = await fetch(API("decision"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ file: state.candFile, accept }),
+    });
+    const d = await r.json();
+    if (d.error) {
+      setMsg(`Decision not recorded: ${d.error}`, "bad");
+      return;                        // keep candFile so it can be retried
+    }
+  } catch (e) {
+    setMsg(`Decision not recorded — ${e.message}.`, "bad");
+    return;
+  }
   state.candFile = null;
   pollReview();
 }
