@@ -8,29 +8,32 @@ directories one level up, so it works in any subdirectory of the web root):
         web/
             review.cgi                <- this file, chmod 755
             index.html, app.js, ...
-            manifest.json             <- players' index (indexes accepted/)
-            manifest-candidates.json  <- indexes candidates/
+            manifest.json             <- players' index: the accepted pool
+            manifest-candidates.json  <- the review queue
+            manifest-rejected.json
         candidates/                   <- awaiting review
         accepted/                     <- accepted, live for players
         rejected/
         review-log.jsonl
+
+NOTHING HERE LISTS A DIRECTORY.  This runs on a restricted server where the
+pool directories can be entered but not read (mode 711 or similar), which is
+the whole reason the manifests exist: they ARE the index, and a problem that
+is not listed in one is not reachable by anybody, including this script.
+Files are only ever opened by a name that came out of a manifest.
+
+Note that `glob` on a traverse-only directory returns an empty list rather
+than raising, so any code that enumerates here fails silently and looks
+exactly like an empty queue.  Don't reintroduce it.  The consequence for the
+generator: appending a file to candidates/ is not enough, its name has to go
+into manifest-candidates.json or nothing will ever see it.
 
 There is no authentication: the review UI is simply not linked from the
 page, so it is only reached by typing ?review on the end of the URL.  That
 keeps it out of the way of ordinary visitors; it does NOT keep out anyone
 who is actually looking.  Every decision is appended to review-log.jsonl.
 
-The manifests are directory indexes (the web server cannot list a directory,
-so the player needs them), rebuilt from the actual directory contents.  Two
-rules keep that from doing damage when the paths are wrong:
-
-  * the pool directories are NEVER created here.  A missing candidates/ is a
-    deployment error, and creating an empty one would hide it.
-  * a plain GET will not blank a non-empty manifest.  Emptiness is only
-    trusted after a decision, which proves the directory is the right one by
-    having just moved a file out of it.  Override with &force=1.
-
-?action=diag reports every resolved path and what is actually there.
+?action=diag reports every resolved path and probes them by name.
 """
 import json
 import os
@@ -42,20 +45,21 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent          # .../dead-or-alive/web
 ROOT = HERE.parent                              # .../dead-or-alive
-CANDIDATES = ROOT / "candidates"
-ACCEPTED = ROOT / "accepted"
-REJECTED = ROOT / "rejected"
+
+# pool -> (directory, manifest served to the browser)
+POOLS = {
+    "candidates": (ROOT / "candidates", HERE / "manifest-candidates.json"),
+    "accepted": (ROOT / "accepted", HERE / "manifest.json"),
+    "rejected": (ROOT / "rejected", HERE / "manifest-rejected.json"),
+}
+CANDIDATES, CAND_MF = POOLS["candidates"]
+ACCEPTED, ACC_MF = POOLS["accepted"]
+REJECTED, REJ_MF = POOLS["rejected"]
 LOG = ROOT / "review-log.jsonl"
 
-# pool name -> (directory, manifest file served to the browser)
-POOLS = {
-    "accepted": (ACCEPTED, HERE / "manifest.json"),
-    "candidates": (CANDIDATES, HERE / "manifest-candidates.json"),
-    "rejected": (REJECTED, HERE / "manifest-rejected.json"),
-}
-
 HINT = ("candidates/, accepted/ and rejected/ must sit beside web/, i.e. in "
-        f"{ROOT}. Open review.cgi?action=diag for the resolved paths.")
+        f"{ROOT}, and the manifests in {HERE} must be writable by the CGI. "
+        "Open review.cgi?action=diag for the resolved paths.")
 
 
 def reply(obj, status="200 OK"):
@@ -69,93 +73,78 @@ def reply(obj, status="200 OK"):
     sys.exit(0)
 
 
-def listing(directory: Path):
-    """Sorted *.json names, or None if that is not a readable directory."""
-    try:
-        if not directory.is_dir():
-            return None
-        return sorted(p.name for p in directory.glob("*.json"))
-    except OSError:
-        return None
-
-
-def count(directory: Path):
-    got = listing(directory)
-    return None if got is None else len(got)
-
-
-def manifest_names(path: Path):
+def load(path: Path):
+    """The names a manifest lists, in order."""
     try:
         d = json.loads(path.read_text())
     except (OSError, ValueError):
         return []
-    if isinstance(d, list):
-        return list(d)
     if isinstance(d, dict):
-        return list(d.get("problems", []))
-    return []
+        d = d.get("problems", [])
+    return [str(n) for n in d] if isinstance(d, list) else []
 
 
-def sync_manifests(trust=False):
-    """Rewrite each manifest from its directory; return a list of warnings."""
-    warnings = []
-    for directory, path in POOLS.values():
-        got = listing(directory)
-        if got is None:
-            warnings.append(f"{directory} does not exist or is unreadable; "
-                            f"{path.name} left untouched")
-            continue
-        listed = manifest_names(path)
-        if not got and listed and not trust:
-            warnings.append(
-                f"{directory} holds no problems but {path.name} lists "
-                f"{len(listed)}; refusing to blank it. Fix the path, or add "
-                f"&force=1 if the directory really is empty now")
-            continue
-        body = json.dumps({"problems": got, "count": len(got)}, indent=1)
-        try:
-            if not (path.exists() and path.read_text() == body):
-                path.write_text(body)
-        except OSError as exc:
-            warnings.append(f"cannot write {path.name}: {exc}")
-    return warnings
+def save(path: Path, names, warnings):
+    """Write a manifest atomically where possible, in place otherwise.
 
-
-def entries(directory: Path, limit=60):
-    try:
-        got = sorted(p.name + "/" if p.is_dir() else p.name
-                     for p in directory.iterdir())
-    except OSError as exc:
-        return f"unreadable: {exc}"
-    return got[:limit] + ([f"... {len(got) - limit} more"]
-                          if len(got) > limit else [])
-
-
-def strays():
-    """Queue directories left behind by an earlier layout, if any.
-
-    An older version of this tool kept its data in the deployed folder
-    itself, and an older one still in a sibling dead_or_alive_data/.  If the
-    live queue is in one of those, this is where it shows up.
+    os.replace needs write permission on web/; a host that only grants write
+    on the files themselves still works, it just loses atomicity.
     """
-    found = []
-    for base in (ROOT, ROOT.parent):
+    uniq = sorted(set(names))
+    body = json.dumps({"problems": uniq, "count": len(uniq)}, indent=1)
+    tmp = path.with_name(f"{path.name}.tmp{os.getpid()}")
+    try:
+        tmp.write_text(body)
+        os.replace(tmp, path)
+        return True
+    except OSError:
         try:
-            kids = sorted(base.iterdir())
+            tmp.unlink()
         except OSError:
-            continue
-        for kid in kids:
-            try:
-                if not kid.is_dir() or "dead" not in kid.name.lower():
-                    continue
-            except OSError:
-                continue
-            for sub in ("candidates", "accepted", "rejected"):
-                n = count(kid / sub)
-                if n:
-                    found.append({"dir": str(kid / sub), "json_files": n})
-    return [f for f in found if f["dir"] not in
-            (str(CANDIDATES), str(ACCEPTED), str(REJECTED))]
+            pass
+    try:
+        path.write_text(body)
+        return True
+    except OSError as exc:
+        warnings.append(f"cannot write {path.name}: {exc}")
+        return False
+
+
+def usable(directory: Path):
+    """Can we enter this directory and open known names inside it?"""
+    try:
+        return directory.is_dir() and os.access(directory, os.X_OK)
+    except OSError:
+        return False
+
+
+def queue(warnings):
+    """The pending candidates that actually have a file behind them.
+
+    A name whose file has gone (decided out of band, or never delivered) is
+    dropped from the manifest — the only way to keep it honest without
+    listing the directory.
+    """
+    listed = load(CAND_MF)
+    live, stale = [], []
+    for name in listed:
+        try:
+            ok = (CANDIDATES / name).is_file()
+        except OSError:
+            ok = False
+        (live if ok else stale).append(name)
+    if stale:
+        warnings.append(f"{len(stale)} queued name(s) have no file in "
+                        f"{CANDIDATES} and were dropped from "
+                        f"{CAND_MF.name} (first: {stale[0]})")
+        save(CAND_MF, live, warnings)
+    return live
+
+
+def counts(pending=None):
+    return {"pending": len(load(CAND_MF)) if pending is None else len(pending),
+            "accepted": len(load(ACC_MF)),
+            "rejected": len(load(REJ_MF))}
 
 
 def diagnostics():
@@ -164,29 +153,56 @@ def diagnostics():
         user = pwd.getpwuid(os.geteuid()).pw_name
     except Exception:                                     # noqa: BLE001
         user = str(os.geteuid())
+    warnings = []
     pools = {}
-    for name, (directory, path) in POOLS.items():
-        got = listing(directory)
+    for name, (directory, mf) in POOLS.items():
+        listed = load(mf)
+        # probe by name: the only meaningful readability test when the
+        # directory cannot be listed
+        probe = {"name": None, "opens": None}
+        if listed:
+            probe["name"] = listed[0]
+            try:
+                (directory / listed[0]).read_bytes()
+                probe["opens"] = True
+            except OSError as exc:
+                probe["opens"] = False
+                probe["error"] = str(exc)
+                warnings.append(f"{mf.name} lists {len(listed)} problem(s) but "
+                                f"{directory / listed[0]} cannot be opened: {exc}")
         pools[name] = {
             "dir": str(directory),
-            "exists": directory.exists(),
-            "readable": got is not None,
-            "json_files": None if got is None else len(got),
+            "is_dir": directory.is_dir(),
+            "searchable": os.access(directory, os.X_OK),
             "writable": os.access(directory, os.W_OK),
-            "manifest": path.name,
-            "manifest_lists": len(manifest_names(path)),
+            "listable": os.access(directory, os.R_OK),   # not required
+            "manifest": mf.name,
+            "manifest_exists": mf.exists(),
+            "manifest_lists": len(listed),
+            "manifest_writable": os.access(mf if mf.exists() else HERE, os.W_OK),
+            "first_entry": probe,
         }
+        if not usable(directory):
+            warnings.append(f"{directory} is missing or cannot be entered")
+    # legacy locations, probed by name — never enumerated
+    legacy = {}
+    for p in (ROOT / "problems",
+              ROOT.parent / "dead_or_alive" / "candidates",
+              ROOT.parent / "dead_or_alive_data" / "candidates",
+              ROOT / "web" / "problems"):
+        if p.exists():
+            legacy[str(p)] = "exists — leftover from an older layout?"
     return {
         "script": str(Path(__file__).resolve()),
         "web_dir": str(HERE),
         "root": str(ROOT),
         "running_as": user,
+        "enumerates_directories": False,
         "pools": pools,
-        "beside_web": entries(ROOT),
-        "manifests_writable": os.access(HERE, os.W_OK),
-        "log_writable": os.access(LOG if LOG.exists() else ROOT, os.W_OK),
-        "other_queues_found": strays(),
-        "warnings": sync_manifests(),
+        "log": {"path": str(LOG),
+                "writable": os.access(LOG if LOG.exists() else ROOT, os.W_OK)},
+        "legacy_paths": legacy,
+        "warnings": warnings,
         "hint": HINT,
     }
 
@@ -194,7 +210,6 @@ def diagnostics():
 def main():
     qs = urllib.parse.parse_qs(os.environ.get("QUERY_STRING", ""))
     action = (qs.get("action") or ["next"])[0]
-    force = (qs.get("force") or [""])[0] == "1"
 
     if os.environ.get("REQUEST_METHOD", "GET").upper() == "POST":
         try:
@@ -209,57 +224,76 @@ def main():
     if action == "diag":
         reply(diagnostics())
 
-    if listing(CANDIDATES) is None:
-        reply({"error": f"candidates directory not found: {CANDIDATES}",
-               "hint": HINT, "warnings": sync_manifests()},
-              "500 Internal Server Error")
+    warnings = []
+    if not usable(CANDIDATES):
+        reply({"error": f"cannot enter the candidates directory: {CANDIDATES}",
+               "hint": HINT}, "500 Internal Server Error")
 
     if action == "decision":
         name = Path(str(data.get("file", ""))).name      # no path tricks
+        if not name.endswith(".json") or name not in load(CAND_MF):
+            reply({"error": f"{name or '(none)'} is not in {CAND_MF.name}"},
+                  "404 Not Found")
         src = CANDIDATES / name
-        if not name.endswith(".json") or not src.exists():
-            reply({"error": f"no such candidate {name}"}, "404 Not Found")
+        if not src.is_file():
+            reply({"error": f"queued but missing on disk: {src}"},
+                  "404 Not Found")
         accept = bool(data.get("accept"))
-        dest = ACCEPTED if accept else REJECTED
-        if not dest.is_dir():
-            reply({"error": f"destination directory not found: {dest}",
+        dest, dest_mf = (ACCEPTED, ACC_MF) if accept else (REJECTED, REJ_MF)
+        if not usable(dest):
+            reply({"error": f"cannot enter the destination directory: {dest}",
                    "hint": HINT}, "500 Internal Server Error")
-        shutil.move(str(src), str(dest / name))
-        force = True            # the move proves CANDIDATES is the right one
+        try:
+            shutil.move(str(src), str(dest / name))
+        except OSError as exc:
+            reply({"error": f"could not move {name}: {exc}", "hint": HINT},
+                  "500 Internal Server Error")
 
-        with LOG.open("a") as fh:
-            fh.write(json.dumps({
-                "time": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
-                "file": name,
-                "decision": "accept" if accept else "reject",
-                "ip": os.environ.get("REMOTE_ADDR", "?"),
-            }) + "\n")
+        # the file has moved; the manifests must follow or it becomes invisible
+        ok = save(CAND_MF, [n for n in load(CAND_MF) if n != name], warnings)
+        ok &= save(dest_mf, load(dest_mf) + [name], warnings)
+        try:
+            with LOG.open("a") as fh:
+                fh.write(json.dumps({
+                    "time": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+                    "file": name,
+                    "decision": "accept" if accept else "reject",
+                    "ip": os.environ.get("REMOTE_ADDR", "?"),
+                }) + "\n")
+        except OSError as exc:
+            warnings.append(f"cannot append to {LOG.name}: {exc}")
+        out = counts()
+        out.update({"ok": bool(ok), "warnings": warnings})
+        if not ok:
+            out["error"] = (f"{name} was moved into {dest.name}/ but the "
+                            "manifests could not be updated")
+            reply(out, "500 Internal Server Error")
+        reply(out)
 
-    warnings = sync_manifests(trust=force)
-
-    if action in ("stats", "decision"):
-        out = {"pending": count(CANDIDATES), "accepted": count(ACCEPTED),
-               "rejected": count(REJECTED), "warnings": warnings}
-        if action == "decision":
-            out["ok"] = True
+    if action == "stats":
+        pending = queue(warnings)
+        out = counts(pending)
+        out["warnings"] = warnings
         reply(out)
 
     if action == "next":
-        files = listing(CANDIDATES)
-        if not files:
-            reply({"empty": True, "pending": 0, "accepted": count(ACCEPTED),
-                   "dir": str(CANDIDATES), "warnings": warnings})
-        f = CANDIDATES / files[0]
+        pending = queue(warnings)
+        if not pending:
+            out = counts(pending)
+            out.update({"empty": True, "dir": str(CANDIDATES),
+                        "manifest": CAND_MF.name, "warnings": warnings})
+            reply(out)
+        name = pending[0]
         try:
-            problem = json.loads(f.read_text())
-        except json.JSONDecodeError:
-            reply({"error": f"unreadable candidate {f.name}"},
-                  "500 Internal Server Error")
-        reply({"file": f.name, "problem": problem, "pending": len(files),
-               "accepted": count(ACCEPTED), "warnings": warnings})
+            problem = json.loads((CANDIDATES / name).read_text())
+        except (OSError, ValueError) as exc:
+            reply({"error": f"cannot read candidate {name}: {exc}",
+                   "warnings": warnings}, "500 Internal Server Error")
+        out = counts(pending)
+        out.update({"file": name, "problem": problem, "warnings": warnings})
+        reply(out)
 
-    reply({"error": f"unknown action {action}", "warnings": warnings},
-          "400 Bad Request")
+    reply({"error": f"unknown action {action}"}, "400 Bad Request")
 
 
 if __name__ == "__main__":
